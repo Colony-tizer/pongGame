@@ -7,9 +7,9 @@ PongGame — local multiplayer game of Pong.
 # Features
 * Ball accelerates each time when touches a pad<br />
 * Player's pad shrinks a bit each time when touches a ball<br />
+* To accelerate the ball players should move their pads in direction of the ball vertical direction at the moment of touch<br />
 * Players can adjust ball speed by moving their pads down or up at the moment of touch<br />
 * If the ball reaches critial max speed a special line appears which indicates future location of the ball<br />
-* To accelerate the ball players should move their pads in direction of the ball vertical direction at the moment of touch<br />
 * The first to score 5 wins!
 # How to launch
 There is no executable file (yet!). So you have to manually compile the project. <br />
