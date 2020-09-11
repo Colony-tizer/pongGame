@@ -3,7 +3,7 @@ Class = require "class"
 require "Paddle"
 require "Ball"
 -- DEBUG to enable pause feature, ball positioning by left mouse button, display of collision with pad, position of ball
-DEBUG = true
+DEBUG = false
 -- init height of pads
 PAD_SIZE = 40
 -- the number of lines describing ball's trajectory
