@@ -1,6 +1,7 @@
 # pongGame
 PongGame created using CS50's game dev lecture.
 Lecture 0 link: https://youtu.be/GfwpRU0cT10
+This implementation has significantly better collision detection. 
 
 PongGame — local multiplayer game of Pong.
 
