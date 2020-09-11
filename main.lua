@@ -74,8 +74,8 @@ function love.load()
     })
     -- init main elements
     ball = Ball(WINDOWS_SIZE.virtual.width / 2 + 1, WINDOWS_SIZE.virtual.height / 2 - 1, 9, 9, DEBUG)
-    player1Obj = Paddle(5, 10, 5, PAD_SIZE, ball.minSpeed, ball.superSpeed)
-    player2Obj = Paddle(WINDOWS_SIZE.virtual.width - 15, WINDOWS_SIZE.virtual.height - (PAD_SIZE + 10), 5, PAD_SIZE, ball.minSpeed, ball.superSpeed)
+    player1Obj = Paddle(5, 10, 5, PAD_SIZE, ball.minSpeed, ball.superSpeed, DEBUG)
+    player2Obj = Paddle(WINDOWS_SIZE.virtual.width - 15, WINDOWS_SIZE.virtual.height - (PAD_SIZE + 10), 5, PAD_SIZE, ball.minSpeed, ball.superSpeed, DEBUG)
 end
 --[[
     Function to handle resizing

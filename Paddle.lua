@@ -1,11 +1,13 @@
 Paddle = Class{}
 
+DEBUG = false
+
 MAX_SPEED = 300
 MIN_SPEED = 100
 MAX_HEIGHT = 80
 MIN_HEIGHT = 10
 
-function Paddle:init(x, y, width, height, speed, maxSpeed)
+function Paddle:init(x, y, width, height, speed, maxSpeed, debugFlag)
     self.x = x
     self.y = y
     self.width = width
@@ -16,6 +18,7 @@ function Paddle:init(x, y, width, height, speed, maxSpeed)
     MAX_HEIGHT = height
     MIN_SPEED = speed
     MAX_SPEED = maxSpeed
+    DEBUG = debugFlag
 end
 
 function Paddle:update(dt, windowSize)
@@ -35,11 +38,13 @@ function Paddle:updateSpeedAndHeight(ballSpeed)
     elseif (ballSpeed < self.speed) then
         speedCoeff = math.max(0.5, ballSpeed / self.speed)
     end
-    print("ball")
-    print(ballSpeed)
-    print(self.speed)
-    print("SPeed")
-    print(speedCoeff)
+    if (DEBUG == true) then
+        print("ball")
+        print(ballSpeed)
+        print(self.speed)
+        print("SPeed")
+        print(speedCoeff)
+    end
     self.speed = math.min(math.max(MIN_SPEED, self.speed * speedCoeff), MAX_SPEED)
 end
 
