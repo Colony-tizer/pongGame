@@ -4,7 +4,6 @@ require "Paddle"
 require "Ball"
 inspect = require "inspect"
 -- DEBUG to enable pause feature, ball positioning by left mouse button, display of collision with pad, position of ball
-DEBUG = false
 -- init height of pads
 PAD_SIZE = 40
 -- the number of lines describing ball's trajectory
@@ -134,8 +133,13 @@ end
 function love.update(dt) 
     if (love.mouse.isDown(1) and DEBUG) then
         -- moving ball to cursor
-        ball.x = love.mouse.getX() * (WINDOWS_SIZE.virtual.width / WINDOWS_SIZE.width)
-        ball.y = love.mouse.getY() * (WINDOWS_SIZE.virtual.height / WINDOWS_SIZE.height)
+        clickPosX, clickPosY = push:toGame(love.mouse.getX(), love.mouse.getY())
+        if (clickPosX ~= nil) then
+            ball.x = clickPosX
+        end
+        if (clickPosY ~= nil) then
+            ball.y = clickPosY
+        end
         ball.prevX = ball.x
         ball.prevY = ball.y
     end
