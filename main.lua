@@ -58,7 +58,6 @@ function love.load()
     love.math.setRandomSeed(os.time())
     -- set graphical filter and bg color
     love.graphics.setDefaultFilter('nearest', 'nearest')
-    love.graphics.clear(15 / 255, 15 / 255, 35 / 255, 255 / 255);
     -- init fonts
     smallFont = love.graphics.setNewFont("font.ttf", 8)
     titleFont = love.graphics.setNewFont("font.ttf", 8)
@@ -306,6 +305,7 @@ end
 function love.draw()
     -- using push to make pixel style graphics
     push:apply('start')
+    love.graphics.clear(15 / 255, 15 / 255, 25 / 255, 255 / 255);
     love.graphics.setFont(titleFont)
     -- print text
     love.graphics.printf(
