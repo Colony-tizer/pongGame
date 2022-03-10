@@ -1,18 +1,19 @@
 # pongGame
-PongGame created using CS50's game dev lecture.
+### _Refactoring is coming soon_
+This implementation of Pong game created with help of the CS50's game dev lecture.
 Lecture 0 link: https://youtu.be/GfwpRU0cT10
 This implementation has significantly better collision detection. 
 
-PongGame — local multiplayer game of Pong.
+PongGame is a local multiplayer game of Pong.
 
 # Features
 * Ball accelerates each time when touches a pad<br />
-* Player's pad shrinks a bit each time when touches a ball<br />
-* To accelerate the ball players should move their pads in direction of the ball vertical direction at the moment of touch<br />
-* Players can adjust ball speed by moving their pads down or up at the moment of touch<br />
-* If the ball reaches critial max speed a special line appears which indicates future location of the ball<br />
+    * To accelerate the ball players should move their pads in the direction of the ball's vertical velocity at the moment of the touch<br />
+    * Players can adjust the ball speed by moving their pads down or up at the moment of the touch<br />
+* Player's pad shrinks a bit each time when it touches the ball<br />
+* If the ball reaches critical max speed -- a special line appears which indicates a future location of the ball<br />
 * The first to score 5 wins!
-# How to launch
+# How to launch (Ubuntu/MacOs)
 There is no executable file (yet!). So you have to manually compile the project. <br />
 You have to have installed framework LÖVE 11 or above. <br />
 * Open the terminal 
@@ -72,13 +73,13 @@ DEBUG = true
 Info about the positions of all interaction objects will appear near them. <br />
 Info about size of pads will appear near them.
 ## Pause
-If the game in the ```'game'``` state press ```SPACE_BAR``` button to pause the game. The game will freeze.
+If the game in the ```'game'``` state press ```SPACE_BAR``` button to pause the game. The game will freeze. To unpause press ```SPACE_BAR``` again.
 ## Ball manipulation
 Use ```LEFT_CLICK``` mouse button to set the ball's positions.
 ## Collision info
-The word ```true``` or ```false``` will appear near pads whether the ball is colliding or not. 
+The word ```true``` or ```false``` will appear near pads whether the ball is colliding with pads or not. 
 ## Ball tracing
-To enable feature set property ```SUPER_SPEED``` to ```0``` in the ```Ball.lua``` file: <br />
+To enable the ball tracing feature at the start of the game, set property ```SUPER_SPEED``` to ```0``` in the ```Ball.lua``` file: <br />
 ```
 SUPER_SPEED = 0
 ```
